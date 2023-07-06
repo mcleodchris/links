@@ -10,19 +10,25 @@
     <style type="text/css">
       :root{--measure:60ch}*{max-inline-size:var(--measure);box-sizing:border-box}body,div,footer,header,html,main,nav{max-inline-size:none}body,html{margin:0;padding:0;font-family:system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";line-height:1.5}h1,h2,h3{line-height:1.1;font-weight:700;color:rgba(0,0,0,.8)}h1,h2,h3,p{font-size:clamp(var(--fluid-type-min, 1rem),calc(1rem + var(--fluid-type-target, 3vw)),var(--fluid-type-max, 1.3rem))}h1{--fluid-type-min:2rem;--fluid-type-max:4rem;--fluid-type-target:5vw;max-width:15ch}h2,h3{max-width:30ch}h2{--fluid-type-min:1.6rem;--fluid-type-max:2.8rem}h3{--fluid-type-min:1.5rem;--fluid-type-max:2.5rem}p{max-width:60ch;margin:0 0 .4em}.wrapper{display:flex;flex-direction:column;min-block-size:100vh;padding:1rem;align-items:center;background-image:linear-gradient(176.9deg,rgba(79,147,249,.94) 62.2%,#e242f9)}.wrapper>*{margin-block:1rem}.wrapper>:first-child{margin-block-start:0}.wrapper>:last-child{margin-block-end:0}.wrapper>.h-card{margin-block:auto}.h-card,.h-card .u-links ul{display:flex;flex-direction:column}.h-card,.h-card .u-photo{border:1px solid rgba(0,0,0,.4)}.h-card{padding:1rem;border-radius:5px;box-shadow:3px 5px 5px rgba(0,0,0,.2);background-color:rgba(255,255,255,.9)}.h-card footer p,.h-card>header{text-align:center}.h-card .u-photo{border-radius:100%;padding:3px}.h-card .p-note p{margin:0}.h-card .p-note p::before{content:"- ";color:rgba(0,0,0,.2);font-weight:800}.h-card footer{text-transform:uppercase;letter-spacing:.2em;color:rgba(0,0,0,.4);border-top:1px solid rgba(0,0,0,.4);margin-top:1rem}.h-card footer p{font-size:.75em;margin:auto}.h-card footer p a{color:rgba(0,0,0,.4);text-decoration:none}.h-card footer p a:hover{text-decoration:underline;underline-offset:.2em}.h-card .u-links ul{margin:0;padding:0;list-style-type:none}.h-card .u-links ul li{font-size:1.6em;margin:0 0 .5rem}.h-card .u-links ul li a{display:flex;flex-direction:row;padding:.2rem .5rem;text-decoration:none;justify-content:space-between;justify-items:start;align-items:center;text-transform:uppercase;font-weight:600;box-shadow:inset 0 0 0 0#3f88a3;color:#3f88a3;margin:0-.25rem;transition:color .3s ease-in-out,box-shadow .3s ease-in-out;border-radius:3px}.h-card .u-links ul li a:hover{box-shadow:inset var(--measure)0 0 0#3f88a3;color:#fff}.h-card .u-links ul li a span{display:inline-block}.h-card .u-links ul li a svg{height:1.2em;order:2;fill:#54b3d6;transition:fill .3s}.h-card .u-links ul li a:hover svg,.h-card .u-links ul li a[href^="https://bsky."]:hover svg,.h-card .u-links ul li a[href^="https://github."]:hover svg,.h-card .u-links ul li a[href^="https://instagram."]:hover svg,.h-card .u-links ul li a[href^="https://mastodon."]:hover svg,.h-card .u-links ul li a[href^="https://micro."]:hover svg,.h-card .u-links ul li a[href^="https://twitter."]:hover svg{fill:#fff}.h-card .u-links ul li a[href^="https://micro."]{color:#ff9600}.h-card .u-links ul li a[href^="https://micro."] svg{fill:#ff9600}.h-card .u-links ul li a[href^="https://micro."]:hover{box-shadow:inset var(--measure)0 0 0#ff9600;color:#fff}.h-card .u-links ul li a[href^="https://github."]{color:#000}.h-card .u-links ul li a[href^="https://github."] svg{fill:#000}.h-card .u-links ul li a[href^="https://github."]:hover{box-shadow:inset var(--measure)0 0 0#000;color:#fff}.h-card .u-links ul li a[href^="https://twitter."]{color:#1d9bf0}.h-card .u-links ul li a[href^="https://twitter."] svg{fill:#1d9bf0}.h-card .u-links ul li a[href^="https://twitter."]:hover{box-shadow:inset var(--measure)0 0 0#1d9bf0;color:#fff}.h-card .u-links ul li a[href^="https://bsky."]{color:#0066fe}.h-card .u-links ul li a[href^="https://bsky."] svg{fill:#0066fe}.h-card .u-links ul li a[href^="https://bsky."]:hover{box-shadow:inset var(--measure)0 0 0#0066fe;color:#fff}.h-card .u-links ul li a[href^="https://instagram."]{color:#d6249f}.h-card .u-links ul li a[href^="https://instagram."] svg{fill:#d6249f}.h-card .u-links ul li a[href^="https://instagram."]:hover{box-shadow:inset var(--measure)0 0 0#d6249f;color:#fff}.h-card .u-links ul li a[href^="https://mastodon."]{color:#8c8dff}.h-card .u-links ul li a[href^="https://mastodon."] svg{fill:#8c8dff}.h-card .u-links ul li a[href^="https://mastodon."]:hover{box-shadow:inset var(--measure)0 0 0#8c8dff;color:#fff}
     </style>
-      
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png">
   </head>
   <body>
     <div class="wrapper">
       <main class="h-card">
+        <!-- HEADER section with name and user profile picture -->
         <header>
           <img
             class="u-photo"
             src="/assets/img/avatar.png"
             alt="User avatar of Chris McLeod"
+            height="250"
+            width="250"
           />
           <h1 class="p-name">Chris McLeod</h1>
         </header>
+        <!-- END: HEADER section with name and user profile picture -->
+        <!-- "ABOUT ME" section -->
         <section class="p-note">
           <p>Online since before some of you were born.</p>
           <p>Tired.</p>
@@ -36,6 +42,8 @@
           </p>
           <p>⚠️ Potential to post Warhammer content ⚠️</p>
         </section>
+        <!-- END: "ABOUT ME" section -->
+        <!-- SOCIAL MEDIA LINKS section -->
         <nav class="u-links">
           <h2>Links:</h2>
           <ul>
@@ -162,6 +170,7 @@
             </li>
           </ul>
         </nav>
+        <!-- END: SOCIAL MEDIA LINKS section -->
         <footer>
           <p>
             <a href="https://github.com/mcleodchris/links" target="_blank">
