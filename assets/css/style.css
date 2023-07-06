@@ -1,34 +1,39 @@
 :root {
   --measure: 60ch;
 }
+
 * {
   max-inline-size: var(--measure);
   box-sizing: border-box;
 }
 
-html,
 body,
 div,
+footer,
 header,
-nav,
+html,
 main,
-footer {
+nav {
   max-inline-size: none;
 }
-html,
-body {
+
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1.5;
 }
+
 h1,
 h2,
 h3 {
   line-height: 1.1;
-  font-weight: 900;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
 }
+
 h1,
 h2,
 h3,
@@ -39,12 +44,17 @@ p {
     var(--fluid-type-max, 1.3rem)
   );
 }
+
 h1 {
   --fluid-type-min: 2rem;
   --fluid-type-max: 4rem;
   --fluid-type-target: 5vw;
-
   max-width: 15ch;
+}
+
+h2,
+h3 {
+  max-width: 30ch;
 }
 
 h2 {
@@ -57,27 +67,9 @@ h3 {
   --fluid-type-max: 2.5rem;
 }
 
-h2,
-h3 {
-  max-width: 30ch;
-}
-
 p {
   max-width: 60ch;
   margin: 0 0 0.4em;
-}
-
-a {
-  box-shadow: inset 0 0 0 0 rgb(63, 136, 163);
-  color: rgb(63, 136, 163);
-  margin: 0 -0.25rem;
-  padding: 0 0.25rem;
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border-radius: 3px;
-}
-a:hover {
-  box-shadow: inset var(--measure) 0 0 0 rgb(63, 136, 163);
-  color: white;
 }
 
 .wrapper {
@@ -86,11 +78,10 @@ a:hover {
   min-block-size: 100vh;
   padding: 1rem;
   align-items: center;
-  /* background: linear-gradient(180deg, #1cb5e0 0%, #000851 100%); */
   background-image: linear-gradient(
     176.9deg,
     rgba(79, 147, 249, 0.94) 62.2%,
-    rgba(226, 66, 249, 1)
+    #e242f9
   );
 }
 
@@ -110,46 +101,81 @@ a:hover {
   margin-block: auto;
 }
 
-.h-card {
+.h-card,
+.h-card .u-links ul {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+}
+
+.h-card,
+.h-card .u-photo {
   border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.h-card {
+  padding: 1rem;
   border-radius: 5px;
   box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.9);
 }
+
+.h-card footer p,
 .h-card > header {
   text-align: center;
 }
+
 .h-card .u-photo {
   border-radius: 100%;
   padding: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
 }
+
 .h-card .p-note p {
   margin: 0;
 }
+
 .h-card .p-note p::before {
   content: "- ";
   color: rgba(0, 0, 0, 0.2);
   font-weight: 800;
 }
+
+.h-card footer {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  margin-top: 1rem;
+}
+
+.h-card footer p {
+  font-size: 0.75em;
+  margin: auto;
+}
+
+.h-card footer p a {
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.h-card footer p a:hover {
+  text-decoration: underline;
+  underline-offset: 0.2em;
+}
+
 .h-card .u-links ul {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
   list-style-type: none;
 }
+
 .h-card .u-links ul li {
   font-size: 1.6em;
   margin: 0 0 0.5rem;
 }
+
 .h-card .u-links ul li a {
   display: flex;
   flex-direction: row;
-  /* background-color: #1cb5e0; */
   padding: 0.2rem 0.5rem;
   text-decoration: none;
   justify-content: space-between;
@@ -157,130 +183,126 @@ a:hover {
   align-items: center;
   text-transform: uppercase;
   font-weight: 600;
+  box-shadow: inset 0 0 0 0 #3f88a3;
+  color: #3f88a3;
+  margin: 0-0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 3px;
 }
+
+.h-card .u-links ul li a:hover {
+  box-shadow: inset var(--measure) 0 0 0 #3f88a3;
+  color: #fff;
+}
+
 .h-card .u-links ul li a span {
   display: inline-block;
 }
+
 .h-card .u-links ul li a svg {
   height: 1.2em;
   order: 2;
   fill: #54b3d6;
   transition: fill 0.3s;
 }
-.h-card .u-links ul li a:hover svg {
+
+.h-card .u-links ul li a:hover svg,.h-card .u-links ul li a[href^="https://bsky."]:hover svg,.h-card .u-links ul li a[href^="https://github."]:hover svg,.h-card .u-links ul li a[href^="https://instagram."]:hover svg,.h-card .u-links ul li a[href^="https://mastodon."]:hover svg,.h-card .u-links ul li a[href^="https://micro."]:hover svg,.h-card .u-links ul li a[href^="https://twitter."]:hover svg
+{
   fill: #fff;
 }
 
-/* MICRO.BLOG */
-a[href^="https://micro."]
+.h-card .u-links ul li a[href^="https://micro."]
 {
-  color: rgb(255, 150, 0);
+  color: #ff9600;
 }
+
 .h-card .u-links ul li a[href^="https://micro."] svg
 {
-  fill: rgb(255, 150, 0);
-}
-a[href^="https://micro."]:hover
-{
-  box-shadow: inset var(--measure) 0 0 0 rgb(255, 150, 0);
-  color: #fff;
-}
-.h-card .u-links ul li a[href^="https://micro."]:hover svg
-{
-  fill: #fff;
+  fill: #ff9600;
 }
 
-/* GITHUB LINKS */
-a[href^="https://github."]
+.h-card .u-links ul li a[href^="https://micro."]:hover
 {
-  color: rgb(0, 0, 0);
+  box-shadow: inset var(--measure) 0 0 0 #ff9600;
+  color: #fff;
 }
+
+.h-card .u-links ul li a[href^="https://github."]
+{
+  color: #000;
+}
+
 .h-card .u-links ul li a[href^="https://github."] svg
 {
-  fill: rgb(0, 0, 0);
-}
-a[href^="https://github."]:hover
-{
-  box-shadow: inset var(--measure) 0 0 0 rgb(0, 0, 0);
-  color: #fff;
-}
-.h-card .u-links ul li a[href^="https://github."]:hover svg
-{
-  fill: #fff;
+  fill: #000;
 }
 
-/* TWITTER LINKS */
-a[href^="https://twitter."]
+.h-card .u-links ul li a[href^="https://github."]:hover
 {
-  color: rgb(29, 155, 240);
+  box-shadow: inset var(--measure) 0 0 0 #000;
+  color: #fff;
 }
+
+.h-card .u-links ul li a[href^="https://twitter."]
+{
+  color: #1d9bf0;
+}
+
 .h-card .u-links ul li a[href^="https://twitter."] svg
 {
-  fill: rgb(29, 155, 240);
-}
-a[href^="https://twitter."]:hover
-{
-  box-shadow: inset var(--measure) 0 0 0 rgb(29, 155, 240);
-  color: #fff;
-}
-.h-card .u-links ul li a[href^="https://twitter."]:hover svg
-{
-  fill: #fff;
+  fill: #1d9bf0;
 }
 
-/* BSKY LINKS */
-a[href^="https://bsky."]
+.h-card .u-links ul li a[href^="https://twitter."]:hover
 {
-  color: rgb(0, 102, 254);
+  box-shadow: inset var(--measure) 0 0 0 #1d9bf0;
+  color: #fff;
 }
+
+.h-card .u-links ul li a[href^="https://bsky."]
+{
+  color: #0066fe;
+}
+
 .h-card .u-links ul li a[href^="https://bsky."] svg
 {
-  fill: rgb(0, 102, 254);
-}
-a[href^="https://bsky."]:hover
-{
-  box-shadow: inset var(--measure) 0 0 0 rgb(0, 102, 254);
-  color: #fff;
-}
-.h-card .u-links ul li a[href^="https://bsky."]:hover svg
-{
-  fill: #fff;
+  fill: #0066fe;
 }
 
-/* INSTAGRAM LINKS */
-a[href^="https://instagram."]
+.h-card .u-links ul li a[href^="https://bsky."]:hover
 {
-  color: rgb(214, 36, 159);
+  box-shadow: inset var(--measure) 0 0 0 #0066fe;
+  color: #fff;
 }
+
+.h-card .u-links ul li a[href^="https://instagram."]
+{
+  color: #d6249f;
+}
+
 .h-card .u-links ul li a[href^="https://instagram."] svg
 {
-  fill: rgb(214, 36, 159);
-}
-a[href^="https://instagram."]:hover
-{
-  box-shadow: inset var(--measure) 0 0 0 rgb(214, 36, 159);
-  color: #fff;
-}
-.h-card .u-links ul li a[href^="https://instagram."]:hover svg
-{
-  fill: #fff;
+  fill: #d6249f;
 }
 
-/* MASTODON LINKS */
-a[href^="https://mastodon."]
+.h-card .u-links ul li a[href^="https://instagram."]:hover
 {
-  color: rgb(140, 141, 255);
-}
-.h-card .u-links ul li a[href^="https://mastodon."] svg
-{
-  fill: rgb(140, 141, 255);
-}
-a[href^="https://mastodon."]:hover
-{
-  box-shadow: inset var(--measure) 0 0 0 rgb(140, 141, 255);
+  box-shadow: inset var(--measure) 0 0 0 #d6249f;
   color: #fff;
 }
-.h-card .u-links ul li a[href^="https://mastodon."]:hover svg
+
+.h-card .u-links ul li a[href^="https://mastodon."]
 {
-  fill: #fff;
+  color: #8c8dff;
+}
+
+.h-card .u-links ul li a[href^="https://mastodon."] svg
+{
+  fill: #8c8dff;
+}
+
+.h-card .u-links ul li a[href^="https://mastodon."]:hover
+{
+  box-shadow: inset var(--measure) 0 0 0 #8c8dff;
+  color: #fff;
 }
