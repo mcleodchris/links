@@ -265,3 +265,22 @@ a[href^="https://instagram."]:hover
 {
   fill: #fff;
 }
+
+/* MASTODON LINKS */
+a[href^="https://mastodon."]
+{
+  color: rgb(140, 141, 255);
+}
+.h-card .u-links ul li a[href^="https://mastodon."] svg
+{
+  fill: rgb(140, 141, 255);
+}
+a[href^="https://mastodon."]:hover
+{
+  box-shadow: inset var(--measure) 0 0 0 rgb(140, 141, 255);
+  color: #fff;
+}
+.h-card .u-links ul li a[href^="https://mastodon."]:hover svg
+{
+  fill: #fff;
+}
