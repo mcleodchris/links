@@ -66,6 +66,20 @@ p {
   max-width: 60ch;
   margin: 0 0 0.4em;
 }
+
+a {
+  box-shadow: inset 0 0 0 0 rgb(63, 136, 163);
+  color: rgb(63, 136, 163);
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 3px;
+}
+a:hover {
+  box-shadow: inset var(--measure) 0 0 0 rgb(63, 136, 163);
+  color: white;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -135,7 +149,7 @@ p {
 .h-card .u-links ul li a {
   display: flex;
   flex-direction: row;
-  background-color: #1cb5e0;
+  /* background-color: #1cb5e0; */
   padding: 0.2rem 0.5rem;
   text-decoration: none;
   justify-content: space-between;
@@ -143,10 +157,111 @@ p {
   align-items: center;
   text-transform: uppercase;
   font-weight: 600;
-  color: #fff;
+}
+.h-card .u-links ul li a span {
+  display: inline-block;
 }
 .h-card .u-links ul li a svg {
   height: 1.2em;
   order: 2;
+  fill: #54b3d6;
+  transition: fill 0.3s;
+}
+.h-card .u-links ul li a:hover svg {
+  fill: #fff;
+}
+
+/* MICRO.BLOG */
+a[href^="https://micro."]
+{
+  color: rgb(255, 150, 0);
+}
+.h-card .u-links ul li a[href^="https://micro."] svg
+{
+  fill: rgb(255, 150, 0);
+}
+a[href^="https://micro."]:hover
+{
+  box-shadow: inset var(--measure) 0 0 0 rgb(255, 150, 0);
+  color: #fff;
+}
+.h-card .u-links ul li a[href^="https://micro."]:hover svg
+{
+  fill: #fff;
+}
+
+/* GITHUB LINKS */
+a[href^="https://github."]
+{
+  color: rgb(0, 0, 0);
+}
+.h-card .u-links ul li a[href^="https://github."] svg
+{
+  fill: rgb(0, 0, 0);
+}
+a[href^="https://github."]:hover
+{
+  box-shadow: inset var(--measure) 0 0 0 rgb(0, 0, 0);
+  color: #fff;
+}
+.h-card .u-links ul li a[href^="https://github."]:hover svg
+{
+  fill: #fff;
+}
+
+/* TWITTER LINKS */
+a[href^="https://twitter."]
+{
+  color: rgb(29, 155, 240);
+}
+.h-card .u-links ul li a[href^="https://twitter."] svg
+{
+  fill: rgb(29, 155, 240);
+}
+a[href^="https://twitter."]:hover
+{
+  box-shadow: inset var(--measure) 0 0 0 rgb(29, 155, 240);
+  color: #fff;
+}
+.h-card .u-links ul li a[href^="https://twitter."]:hover svg
+{
+  fill: #fff;
+}
+
+/* BSKY LINKS */
+a[href^="https://bsky."]
+{
+  color: rgb(0, 102, 254);
+}
+.h-card .u-links ul li a[href^="https://bsky."] svg
+{
+  fill: rgb(0, 102, 254);
+}
+a[href^="https://bsky."]:hover
+{
+  box-shadow: inset var(--measure) 0 0 0 rgb(0, 102, 254);
+  color: #fff;
+}
+.h-card .u-links ul li a[href^="https://bsky."]:hover svg
+{
+  fill: #fff;
+}
+
+/* INSTAGRAM LINKS */
+a[href^="https://instagram."]
+{
+  color: rgb(214, 36, 159);
+}
+.h-card .u-links ul li a[href^="https://instagram."] svg
+{
+  fill: rgb(214, 36, 159);
+}
+a[href^="https://instagram."]:hover
+{
+  box-shadow: inset var(--measure) 0 0 0 rgb(214, 36, 159);
+  color: #fff;
+}
+.h-card .u-links ul li a[href^="https://instagram."]:hover svg
+{
   fill: #fff;
 }
