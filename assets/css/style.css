@@ -1,0 +1,152 @@
+:root {
+  --measure: 60ch;
+}
+* {
+  max-inline-size: var(--measure);
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+  max-inline-size: none;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.5;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  font-weight: 900;
+}
+h1,
+h2,
+h3,
+p {
+  font-size: clamp(
+    var(--fluid-type-min, 1rem),
+    calc(1rem + var(--fluid-type-target, 3vw)),
+    var(--fluid-type-max, 1.3rem)
+  );
+}
+h1 {
+  --fluid-type-min: 2rem;
+  --fluid-type-max: 4rem;
+  --fluid-type-target: 5vw;
+
+  max-width: 15ch;
+}
+
+h2 {
+  --fluid-type-min: 1.6rem;
+  --fluid-type-max: 2.8rem;
+}
+
+h3 {
+  --fluid-type-min: 1.5rem;
+  --fluid-type-max: 2.5rem;
+}
+
+h2,
+h3 {
+  max-width: 30ch;
+}
+
+p {
+  max-width: 60ch;
+  margin: 0 0 0.4em;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+  padding: 1rem;
+  align-items: center;
+  /* background: linear-gradient(180deg, #1cb5e0 0%, #000851 100%); */
+  background-image: linear-gradient(
+    176.9deg,
+    rgba(79, 147, 249, 0.94) 62.2%,
+    rgba(226, 66, 249, 1)
+  );
+}
+
+.wrapper > * {
+  margin-block: 1rem;
+}
+
+.wrapper > :first-child {
+  margin-block-start: 0;
+}
+
+.wrapper > :last-child {
+  margin-block-end: 0;
+}
+
+.wrapper > .h-card {
+  margin-block: auto;
+}
+
+.h-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.h-card > header {
+  text-align: center;
+}
+.h-card .u-photo {
+  border-radius: 100%;
+  padding: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.h-card .p-note p {
+  margin: 0;
+}
+.h-card .p-note p::before {
+  content: "- ";
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 800;
+}
+.h-card .u-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.h-card .u-links ul li {
+  font-size: 1.6em;
+  margin: 0 0 0.5rem;
+}
+.h-card .u-links ul li a {
+  display: flex;
+  flex-direction: row;
+  background-color: #1cb5e0;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  justify-content: space-between;
+  justify-items: start;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+.h-card .u-links ul li a svg {
+  height: 1.2em;
+  order: 2;
+  fill: #fff;
+}
