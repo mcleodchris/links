@@ -206,7 +206,7 @@ p {
   transition: fill 0.3s;
 }
 
-.h-card .u-links ul li a:hover svg,.h-card .u-links ul li a[href^="https://bsky."]:hover svg,.h-card .u-links ul li a[href^="https://github."]:hover svg,.h-card .u-links ul li a[href^="https://instagram."]:hover svg,.h-card .u-links ul li a[href^="https://mastodon."]:hover svg,.h-card .u-links ul li a[href^="https://micro."]:hover svg,.h-card .u-links ul li a[href^="https://twitter."]:hover svg
+.h-card .u-links ul li a:hover svg,.h-card .u-links ul li a[href^="https://bsky."]:hover svg,.h-card .u-links ul li a[href^="https://github."]:hover svg,.h-card .u-links ul li a[href^="https://instagram."]:hover svg,.h-card .u-links ul li a[href^="https://mastodon."]:hover svg,.h-card .u-links ul li a[href^="https://micro."]:hover svg,.h-card .u-links ul li a[href^="https://twitter."]:hover svg, .h-card .u-links ul li a[href^="https://threads."]:hover svg
 {
   fill: #fff;
 }
@@ -304,5 +304,21 @@ p {
 .h-card .u-links ul li a[href^="https://mastodon."]:hover
 {
   box-shadow: inset var(--measure) 0 0 0 #8c8dff;
+  color: #fff;
+}
+
+.h-card .u-links ul li a[href^="https://threads."]
+{
+  color: #d6249f;
+}
+
+.h-card .u-links ul li a[href^="https://threads."] svg
+{
+  fill: #d6249f;
+}
+
+.h-card .u-links ul li a[href^="https://threads."]:hover
+{
+  box-shadow: inset var(--measure) 0 0 0 #d6249f;
   color: #fff;
 }
